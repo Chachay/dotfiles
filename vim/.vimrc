@@ -14,6 +14,9 @@ set hidden
 set showcmd
 " Allows to use backspace
 set backspace=2
+" IME
+set iminsert=0
+set imsearch=-1
 
 "
 " Displays
@@ -32,7 +35,7 @@ set laststatus=2
 set wildmode=list:longest
 nnoremap j gj
 nnoremap k gk
-
+set breakindent
 
 " Tab
 set list listchars=tab:\?\-
