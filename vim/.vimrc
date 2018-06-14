@@ -14,13 +14,13 @@ set hidden
 set showcmd
 " Allows to use backspace
 set backspace=2
-" IME
+colo pablo
 set iminsert=0
 set imsearch=-1
-
 "
 " Displays
 "  
+set ruler
 set number
 set cursorline
 set cursorcolumn
@@ -81,6 +81,10 @@ if dein#load_state(s:dein_dir)
   " Add or remove your plugins here:
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Shougo/neosnippet-snippets')
+  call dein#add('scrooloose/nerdtree')
+  call dein#add('majutsushi/tagbar')
+
+  call dein#add('ajh17/Spacegray.vim')
 
 
   " Required:
@@ -95,3 +99,21 @@ syntax enable
 if dein#check_install()
   call dein#install()
 endif
+
+colorscheme spacegray
+set lines=44
+set columns=180
+set background=dark
+
+map <C-n> :NERDTreeToggle<CR>
+map <C-m> :TagbarToggle<CR>
+let g:tagbar_width = 30
+
+let g:expert_mode = 1
+if get(g:, 'expert_mode')
+  nnoremap <Up>    :resize +2<CR>
+  nnoremap <Down>  :resize -2<CR>
+  nnoremap <Left>  :vertical resize +2<CR>
+  nnoremap <Right> :vertical resize -2<CR>
+endif
+
