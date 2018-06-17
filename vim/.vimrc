@@ -101,8 +101,6 @@ if dein#check_install()
 endif
 
 colorscheme spacegray
-set lines=44
-set columns=180
 set background=dark
 
 map <C-n> :NERDTreeToggle<CR>
