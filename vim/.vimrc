@@ -20,6 +20,7 @@ set imsearch=-1
 "
 " Displays
 "  
+set ambiwidth=double
 set ruler
 set number
 set cursorline
@@ -36,6 +37,7 @@ set wildmode=list:longest
 nnoremap j gj
 nnoremap k gk
 set breakindent
+autocmd BufWritePre * :%s/\s\+$//ge
 
 " Tab
 set list listchars=tab:\?\-
@@ -101,8 +103,6 @@ if dein#check_install()
 endif
 
 colorscheme spacegray
-set lines=44
-set columns=180
 set background=dark
 
 map <C-n> :NERDTreeToggle<CR>
