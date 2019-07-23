@@ -19,7 +19,7 @@ set iminsert=0
 set imsearch=-1
 "
 " Displays
-"  
+"
 set ambiwidth=double
 set ruler
 set number
@@ -85,6 +85,7 @@ if dein#load_state(s:dein_dir)
   call dein#add('Shougo/neosnippet-snippets')
   call dein#add('scrooloose/nerdtree')
   call dein#add('majutsushi/tagbar')
+  call dein#add('godlygeek/tabular')
 
   call dein#add('ajh17/Spacegray.vim')
 
