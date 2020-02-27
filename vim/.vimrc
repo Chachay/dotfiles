@@ -54,7 +54,9 @@ set wrapscan
 set hlsearch
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
-" Dein
+nnoremap <C-S-Up> <Up>"add"ap<Up>
+nnoremap <C-S-Down> "add"ap
+
 let s:dein_dir = expand('~/.cache/dein')
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
@@ -87,8 +89,8 @@ if dein#load_state(s:dein_dir)
   call dein#add('majutsushi/tagbar')
   call dein#add('godlygeek/tabular')
 
-  call dein#add('ajh17/Spacegray.vim')
-
+  call dein#add('joshdick/onedark.vim')
+  call dein#add('itchyny/lightline.vim')
 
   " Required:
   call dein#end()
@@ -103,18 +105,18 @@ if dein#check_install()
   call dein#install()
 endif
 
-colorscheme spacegray
+colorscheme onedark
 set background=dark
+
+let g:expert_mode = 1
+if get(g:, 'expert_mode')
+  nnoremap <Up>    :resize -2<CR>
+  nnoremap <Down>  :resize +2<CR>
+  nnoremap <Left>  :vertical resize +2<CR>
+  nnoremap <Right> :vertical resize -2<CR>
+endif
 
 map <C-n> :NERDTreeToggle<CR>
 map <C-m> :TagbarToggle<CR>
 let g:tagbar_width = 30
-
-let g:expert_mode = 1
-if get(g:, 'expert_mode')
-  nnoremap <Up>    :resize +2<CR>
-  nnoremap <Down>  :resize -2<CR>
-  nnoremap <Left>  :vertical resize +2<CR>
-  nnoremap <Right> :vertical resize -2<CR>
-endif
 

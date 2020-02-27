@@ -50,7 +50,11 @@ set noshowmode
 " Dein
 let s:dein_dir = expand('~/.cache/dein')
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
-let s:base_dir = expand('~/.config/nvim')
+if has('win32')
+  let s:base_dir = expand('~/AppData/Local/nvim')
+else
+  let s:base_dir = expand('~/.config/nvim')
+endif
 
 
 if &runtimepath !~# '/dein.vim'
@@ -78,6 +82,7 @@ filetype plugin indent on
 syntax enable
 
 set background=dark
+colorscheme onedark
 
 runtime! keymaps.vim
 

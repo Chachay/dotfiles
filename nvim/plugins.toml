@@ -16,4 +16,5 @@ repo = 'itchyny/lightline.vim'
 [[plugins]]
 repo = 'joshdick/onedark.vim'
 
-
+[[plugins]]
+repo = 'mg979/vim-visual-multi'
