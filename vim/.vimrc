@@ -44,7 +44,8 @@ set list listchars=tab:\?\-
 set expandtab
 set tabstop=2
 set shiftwidth=2
-
+nnoremap <silent> <C-j> :bprev<CR>
+nnoremap <silent> <C-k> :bnext<CR>
 
 " Search
 set ignorecase

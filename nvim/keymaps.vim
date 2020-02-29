@@ -20,3 +20,6 @@ map <C-n> :NERDTreeToggle<CR>
 map <C-m> :TagbarToggle<CR>
 let g:tagbar_width = 30
 
+nnoremap <silent> <C-j> :bprev<CR>
+nnoremap <silent> <C-k> :bnext<CR>
+
